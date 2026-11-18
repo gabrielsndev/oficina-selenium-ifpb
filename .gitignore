@@ -1,0 +1,9 @@
+venv/
+.venv/
+.env
+__pycache__/
+*.xlsx
+*.csv
+!output/.gitkeep
+credenciais.py
+chrome_profile/
