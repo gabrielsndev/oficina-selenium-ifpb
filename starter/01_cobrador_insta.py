@@ -1,33 +1,32 @@
 import os
-import sys
+import sys 
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-
+from selenium.webdriver.support import expected_conditions as EC
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from credenciais import USUARIO, SENHA
 
+# 1. Configurações do Chrome
 options = webdriver.ChromeOptions()
-options.add_experimental_option("detach", True)
-options.add_argument("--start-maximized")
-options.add_argument("--disable-notifications")
+options.add_argument("--start-maximized")        # Abre em tela cheia
+options.add_argument("--disable-notifications")  # Bloqueia pop-up nativo do navegador
 
-driver = webdriver.Chrome(options=options)
-driver.implicitly_wait(10)
+# 2. Inicializa o driver
 
-# 1. Abre o Instagram e faz login
-driver.get("https://www.instagram.com/")
+# 3. Acessa a página inicial
 
-# TODO: Preencher email, senha e clicar em Entrar
 
-# 2. Pausa para verificação em 2 etapas (2FA)
-time.sleep(20)
 
-# 3. Ir direto para a caixa de entrada do Direct
-driver.get("https://www.instagram.com/direct/inbox/")
+# Fazer o 2FA
 time.sleep(5)
 
-# TODO: Clicar no amigo pelo XPath (//span[text()='...'])
+# Acessando o chat
 
-# TODO: Encontrar a caixa de texto (div[aria-placeholder='Mensagem...']) e enviar a mensagem com Keys.ENTER
+
+
+
+# Cobrando meu pix
+
+
